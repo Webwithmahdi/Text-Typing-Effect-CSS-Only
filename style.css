@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+.content {
+  margin: auto;
+}
+p {
+  font-size: 25px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+p::after {
+  content: "developer";
+  display: inline-block;
+  animation: animation 6.5s steps(9) infinite;
+  width: 0ch;
+  color: lightseagreen;
+}
+p::before {
+  display: inline-block;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  animation: blinking .4s linear alternate infinite;
+}
+@keyframes animation {
+  25% {
+    content: "developer";
+    width: 8.5ch;
+  }
+  40% {
+    width: 0ch;
+  }
+  75% {
+    content: "designer";
+    width: 7.5ch;
+  }
+  90% {
+    width: 0ch;
+  }
+}
+@keyframes blinking {
+  100%{
+   opacity: 0;
+  }
+}
